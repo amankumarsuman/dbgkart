@@ -13,3 +13,5 @@ export const SHIPPING_BASEURL = "https://naturalganicapi.onrender.com/shipping";
 export const NOTIFICATIONS_BASEURL =
   "https://naturalganicapi.onrender.com/notifications";
 export const PAYMENTS_BASEURL = "https://naturalganicapi.onrender.com/payments";
+// export const PAYMENTS_BASEURL = "http://localhost:5000";
+//

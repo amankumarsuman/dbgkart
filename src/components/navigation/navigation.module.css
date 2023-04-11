@@ -15,12 +15,15 @@
 .logo {
     justify-self: start;
     width: auto;
-    height: 1.2em;
+    height: 3.5em;
     flex-shrink: 0;
+    /* border: 1px solid red; */
 }
 
 .logo img {
     object-fit: contain;
+    /* border: 1px solid black; */
+   
 }
 
 .actions {

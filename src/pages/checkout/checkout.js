@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Error from "../../components/feedback/error/Error";
 import { postOrder } from "../../actions/orders";
+import axios from "axios";
 
 const Checkout = () => {
   const [error, setError] = useState("");
@@ -21,7 +22,7 @@ const Checkout = () => {
 
   const cart = useSelector((state) => state.products.cart_validation);
 
-  const handleCheckout = () => {
+  const handleCheckout = async () => {
     if (!fname.current.value) return setError("Enter a first name");
     if (!lname.current.value) return setError("Enter a last name");
     if (!email.current.value) return setError("Enter an email address");
@@ -70,7 +71,20 @@ const Checkout = () => {
         apartment_number: apartment_number.current.value,
       },
     };
+    // try {
+    //   const response = await axios.post("http://localhost:5000/payments", {
+    //     amount: cart.total,
+    //     email: email.current.value,
+    //     phone: phone.current.value,
+    //     orderId: Date.now(),
+    //   });
 
+    //   // Redirect to Paytm payment gateway
+    //   window.location.href = response.data.redirectUrl;
+    // } catch (error) {
+    //   setError(error.message);
+    // }
+    // dispatch(postOrder(cart.token, data, onSuccess, onError));
     dispatch(postOrder(cart.token, data, onSuccess, onError));
   };
   const validatePhone = (phone) => {

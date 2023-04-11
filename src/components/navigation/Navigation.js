@@ -1,5 +1,5 @@
 import styles from "./navigation.module.css";
-import Logo from "../../shared/assets/logo1.png";
+import Logo from "../../shared/assets/logo4.png";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { SEARCH_HIDDEN, SEARCH_VISIBLE } from "./constants/search";
