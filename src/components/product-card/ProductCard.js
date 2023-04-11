@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { updateWishlist } from "../../actions/auth";
 import { useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const ProductCard = ({ product, addProductToCart, productsPage = false }) => {
   const [addToCart, setAddToCart] = useState(false);
@@ -100,9 +102,16 @@ const ProductCard = ({ product, addProductToCart, productsPage = false }) => {
             </p>
           </div>
           {product.stock ? (
-            <div onClick={handleAddToCart} className={styles["add-to-cart"]}>
+            // <div onClick={handleAddToCart} className={styles["add-to-cart"]}>
+            //   Add to Cart
+            // </div>
+            <Button
+              onClick={handleAddToCart}
+              variant="contained"
+              endIcon={<ShoppingCartIcon />}
+            >
               Add to Cart
-            </div>
+            </Button>
           ) : (
             <div className={styles["unavailable"]}>Out of Stock</div>
           )}

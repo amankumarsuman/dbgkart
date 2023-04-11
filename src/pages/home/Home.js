@@ -86,7 +86,7 @@ const Home = ({ addProductToCart }) => {
         <div className={styles["why-component"]}>
           <img src={DeliveryIcon} alt={"Delivery"} />
           <div className={"why-text"}>
-            <div className={styles["why-title"]}>Under 20 minutes</div>
+            <div className={styles["why-title"]}>Under 30 minutes</div>
             <div className={styles["why-desc"]}>
               Delivered on time - Every time!
             </div>
