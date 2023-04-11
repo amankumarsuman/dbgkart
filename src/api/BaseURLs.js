@@ -6,8 +6,8 @@
 // export const PAYMENTS_BASEURL =
 //   "https://rabbitmart-payments.vercel.app/payments";
 // export const USER_BASEURL = 'https://rabbitmart-users.vercel.app/me'
-export const USER_BASEURL = "https://naturalganic.onrender.com";
-export const PRODUCTS_BASEURL = "http://localhost:5000/products";
+export const USER_BASEURL = "https://naturalganic.onrender.com/me";
+export const PRODUCTS_BASEURL = "https://naturalganic.onrender.com/products";
 export const ORDERS_BASEURL = "https://naturalganicapi.onrender.com/orders";
 export const SHIPPING_BASEURL = "https://naturalganicapi.onrender.com/shipping";
 export const NOTIFICATIONS_BASEURL =
