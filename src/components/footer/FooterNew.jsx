@@ -16,6 +16,7 @@ import BusinessIcon from "@mui/icons-material/Business";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import { Link, useNavigate } from "react-router-dom";
 import PublicIcon from "@mui/icons-material/Public";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 const CustomizedListText = styled(ListItemText)`
   color: white;
   cursor:pointer;
@@ -76,6 +77,12 @@ function FooterNew() {
   const handleMouseLeave = () => {
     buttonStyle.backgroundColor = "#007bff";
   };
+
+  function makePhoneCall(phoneNumber) {
+    // You will need to replace `phoneNumber` with the actual phone number you want to call
+    const url = `tel:${phoneNumber}`;
+    window.location.href = url;
+  }
   return (
     <>
       <Grid
@@ -390,6 +397,27 @@ function FooterNew() {
                 }
                 primary="Narsar, Baheri, Darbhanga,Bihar,   847105"
                 secondary="Near Ramghat Chowk"
+              />
+            </ListItem>
+            <ListItem>
+              <ListItemAvatar>
+                <span style={{ cursor: "pointer" }}>
+                  <Avatar
+                    onClick={() => makePhoneCall(+918360105386)}
+                    // href="mailto:business@expelee.com"
+                    sx={{
+                      border: "1.5px dotted white",
+                      backgroundColor: "#3d75ed",
+                    }}
+                  >
+                    <SupportAgentIcon />
+                  </Avatar>
+                </span>
+              </ListItemAvatar>
+              <CustomizedListText
+                onClick={() => makePhoneCall(+918360105386)}
+                primary="+918360105386"
+                // secondary="Near Ramghat Chowk"
               />
             </ListItem>
             {/* <GoogleApiWrapper /> */}
