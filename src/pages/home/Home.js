@@ -6,12 +6,14 @@ import ProductCard from "../../components/product-card/ProductCard";
 import DeliveryIcon from "../../shared/assets/why/delivery.png";
 import ReliableIcon from "../../shared/assets/why/reliable.png";
 import PricesIcon from "../../shared/assets/why/prices.png";
+import fassailogo from "../../shared/assets/FSSAI_logo.png";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import Loading from "../../components/loading/Loading";
 import { getRecommendations } from "../../actions/products";
-
+import DownloadIcon from "@mui/icons-material/Download";
+import certificate from "../../shared/assets/fasai.pdf";
 const Home = ({ addProductToCart }) => {
   const products = useSelector((state) => state.products.recommendations);
   const [loading, setLoading] = useState(true);
@@ -26,7 +28,15 @@ const Home = ({ addProductToCart }) => {
   }, [dispatch]);
 
   if (loading) return <Loading />;
+  function viewPDFInNewTab() {
+    // Open a new window
+    const newWindow = window.open();
 
+    // Set the content of the new window to be a PDF file
+    newWindow.document.write(
+      `<iframe src="${certificate}" style="width:100%;height:100%;"></iframe>`
+    );
+  }
   return (
     <div className={styles["wrapper"]}>
       <div className={styles["hero"]}>
@@ -107,6 +117,20 @@ const Home = ({ addProductToCart }) => {
             <div className={styles["why-title"]}>Amazing prices</div>
             <div className={styles["why-desc"]}>
               Offers offers offers - Every time!
+            </div>
+          </div>
+        </div>
+        <div className={styles["why-component"]}>
+          <img src={fassailogo} alt={"Reliable"} />
+          <div className={"why-text"}>
+            <div className={styles["why-title"]}>
+              Naturalganic Dairy Products
+            </div>
+            <div className={styles["why-desc"]}>
+              Are certified with FSSAI
+              <span onClick={viewPDFInNewTab}>
+                <DownloadIcon />
+              </span>
             </div>
           </div>
         </div>
