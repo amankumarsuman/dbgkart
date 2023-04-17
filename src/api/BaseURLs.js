@@ -19,7 +19,7 @@
 /************************************Backend on vercel********************************************* */
 export const USER_BASEURL = "https://naturalorganic.vercel.app/me";
 export const PRODUCTS_BASEURL = "https://naturalorganic.vercel.app/products";
-export const ORDERS_BASEURL = "http://localhost:5000/orders";
+export const ORDERS_BASEURL = "https://naturalorganic.vercel.app/orders";
 export const ADD_ORDERS_BASEURL =
   "https://naturalorganic.vercel.app/orders/add";
 export const SHIPPING_BASEURL = "https://naturalorganic.vercel.app/orders";
