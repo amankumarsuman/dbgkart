@@ -32,12 +32,27 @@ export const fetchOrders = (page, onSuccess, onError) => async (dispatch) => {
 
 export const postOrder = (token, data, onSuccess, onError) => async () => {
   try {
-    // const [name, email, phone, country, city, area,
-    //     street, building_number, floor, apartment_number] = data;
-    const { url } = await api
-      .processPayment(token, data)
-      .then((res) => res.data);
+    // const [
+    //   name,
+    //   email,
+    //   phone,
+    //   country,
+    //   city,
+    //   area,
+    //   street,
+    //   building_number,
+    //   floor,
+    //   apartment_number,
+    // ] = data;
+    console.log(token, data, "token");
+    // const { url } = await api
+    //   .processPayment(token, data)
+    //   .then((res) => res.data);
     onSuccess("https://naturalganic.shop/orders");
+
+    // const ordersData = await api.postOrder(token, data).then((res) => res.data);
+    // dispatch({ type: POST_ORDER, data: ordersData });
+    // onSuccess();
   } catch (e) {
     onError(e);
   }

@@ -77,6 +77,8 @@ const Signup = () => {
         <input placeholder={"Last Name"} />
         <input placeholder={"Email"} />
         <input placeholder={"Password"} type={"password"} />
+        <input placeholder={"Mobile"} />
+        <input placeholder={"Role"} />
         <button onClick={handleSignup} className={"btn1"}>
           Sign Up
         </button>

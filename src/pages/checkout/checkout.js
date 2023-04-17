@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Error from "../../components/feedback/error/Error";
 import { postOrder } from "../../actions/orders";
 import axios from "axios";
-
+import { v4 as uuidv4 } from "uuid";
 const Checkout = () => {
   const [error, setError] = useState("");
   const fname = useRef();
@@ -62,7 +62,7 @@ const Checkout = () => {
       email: email.current.value,
       phone_number: phone.current.value,
       address: {
-        country: "Egypt",
+        country: "INR",
         city: city.current.value,
         area: area.current.value,
         street: street.current.value,
@@ -70,6 +70,7 @@ const Checkout = () => {
         floor: floor.current.value,
         apartment_number: apartment_number.current.value,
       },
+      orderId: `${Date.now()}${uuidv4().split("-")[0]}`,
     };
     // try {
     //   const response = await axios.post("http://localhost:5000/payments", {
@@ -85,7 +86,7 @@ const Checkout = () => {
     //   setError(error.message);
     // }
     // dispatch(postOrder(cart.token, data, onSuccess, onError));
-    dispatch(postOrder(cart.token, data, onSuccess, onError));
+    dispatch(postOrder(cart, data, onSuccess, onError));
   };
   const validatePhone = (phone) => {
     return String(phone).toLowerCase();

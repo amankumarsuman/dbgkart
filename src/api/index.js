@@ -1,5 +1,6 @@
 import axios from "axios";
 import {
+  ADD_ORDERS_BASEURL,
   ORDERS_BASEURL,
   PAYMENTS_BASEURL,
   PRODUCTS_BASEURL,
@@ -52,3 +53,5 @@ export const updateOrder = (id, status) =>
 
 export const processPayment = (token, data) =>
   API.post(`${PAYMENTS_BASEURL}`, { token, data });
+export const postOrder = (token, data) =>
+  API.post(`${ORDERS_BASEURL}`, { token, data });
