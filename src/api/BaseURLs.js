@@ -22,7 +22,7 @@ export const PRODUCTS_BASEURL = "https://naturalorganic.vercel.app/products";
 export const ORDERS_BASEURL = "https://naturalorganic.vercel.app/orders";
 export const ADD_ORDERS_BASEURL =
   "https://naturalorganic.vercel.app/orders/add";
-export const SHIPPING_BASEURL = "https://naturalorganic.vercel.app/orders";
+export const SHIPPING_BASEURL = "https://naturalorganic.vercel.app/shipping";
 export const NOTIFICATIONS_BASEURL =
   "https://naturalorganic.vercel.app/notifications";
 export const PAYMENTS_BASEURL = "https://naturalorganic.vercel.app/payments";
