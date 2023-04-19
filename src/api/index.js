@@ -41,7 +41,7 @@ export const userUpdateWishlist = (product_id) =>
 export const getWishlist = () => API.get(`${USER_BASEURL}/wishlist`);
 
 export const fetchShipments = (page) =>
-  API.get(`${SHIPPING_BASEURL}?page=${page}`);
+  API.get(`${ORDERS_BASEURL}?page=${page}`);
 export const fetchShipment = (id) => API.get(`${SHIPPING_BASEURL}/${id}`);
 export const updateShipment = (id, status) =>
   API.patch(`${SHIPPING_BASEURL}/${id}`, { status });

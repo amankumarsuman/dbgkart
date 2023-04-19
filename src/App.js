@@ -30,6 +30,8 @@ import Success from "./pages/checkout/success";
 import ShipmentId from "./pages/shipment/id/ShipmentId";
 import OrderId from "./pages/order/id/OrderId";
 import FooterNew from "./components/footer/FooterNew";
+import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
+import TermsAndConditions from "./pages/privacyPolicy/TermsAndConditions";
 
 const cartInitialization = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -130,6 +132,11 @@ const App = () => {
         <Route path={"/login"} element={<Login />} />
         <Route path={"/orders"} element={<Order />} />
         <Route path={"/orders/:id"} element={<OrderId />} />
+        <Route path={"/privacy-policy"} element={<PrivacyPolicy />} />
+        <Route
+          path={"/terms-and-conditions"}
+          element={<TermsAndConditions />}
+        />
         <Route
           path={"/wishlist"}
           element={

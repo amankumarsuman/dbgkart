@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.570053c2.css",
-    "main.js": "/static/js/main.c729491a.js",
+    "main.js": "/static/js/main.baae42de.js",
     "static/media/meat_poultry_seafood.png": "/static/media/meat_poultry_seafood.38db80ea11feff6d17f5.png",
     "static/media/breakfast.png": "/static/media/breakfast.f4bcc1ecc57b87b4b81c.png",
     "static/media/all.png": "/static/media/all.48e1d4e394c434b9d365.png",
@@ -23,10 +23,10 @@
     "static/media/order.png": "/static/media/order.65b57dc4187c083210d8.png",
     "index.html": "/index.html",
     "main.570053c2.css.map": "/static/css/main.570053c2.css.map",
-    "main.c729491a.js.map": "/static/js/main.c729491a.js.map"
+    "main.baae42de.js.map": "/static/js/main.baae42de.js.map"
   },
   "entrypoints": [
     "static/css/main.570053c2.css",
-    "static/js/main.c729491a.js"
+    "static/js/main.baae42de.js"
   ]
 }
